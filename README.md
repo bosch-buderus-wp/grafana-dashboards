@@ -2,10 +2,12 @@
 
 Grafana dashboards for Bosch Compress 5800/6800i & Buderus Logatherm WLW176/186 heat pumps
 
+![Circuits](/images/Grafana-circuits.png)
+
 ## Images of indoor and outdoor unit
 
-<img src="/images/indoor-unit_black.svg" width="45%" />
-<img src="/images/outdoor-unit_black.svg" width="45%" />
+<img src="/images/indoor-unit_black.svg" width="25%" />
+<img src="/images/outdoor-unit_black.svg" width="25%" />
 
 <details>
 <summary>Base64 Indoor Unit</summary>
