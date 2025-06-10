@@ -2833,13 +2833,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now/d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp)",
-  "uid": "grafana-dashboard-emsesp_dark",
+  "uid": "grafana-dashboard-emsesp_light",
   "version": 3,
   "weekStart": ""
 }
