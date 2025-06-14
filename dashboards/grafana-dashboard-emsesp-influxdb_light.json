@@ -1555,7 +1555,7 @@
         "type": "yesoreyeram-infinity-datasource",
         "uid": "${DS_INFINITY}"
       },
-      "description": "### Elektrische Energie\nBisher eingesetzte elektrische Energie inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie\nBisher erzeugte Wärmeenergie. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
+      "description": "### Elektrischer Energieeinsatz\nBisher eingesetzte elektrische Energie inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie\nBisher erzeugte Wärmeenergie. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1581,7 +1581,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Elektrische Energieaufnahme"
+                "value": "Elektrischer Energieeinsatz"
               }
             ]
           },
@@ -1685,7 +1685,7 @@
         "type": "yesoreyeram-infinity-datasource",
         "uid": "${DS_INFINITY}"
       },
-      "description": "### Elektrische Energie (Heizen)\nBisher eingesetzte elektrische Energie für den Heizbetrieb inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Heizen)\nBisher erzeugte Wärmeenergie im Heizbetrieb. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
+      "description": "### Elektrischer Energieeinsatz (Heizen)\nBisher eingesetzte elektrische Energie für den Heizbetrieb inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Heizen)\nBisher erzeugte Wärmeenergie im Heizbetrieb. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1711,7 +1711,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Elektrische Energieaufnahme (Heizen)"
+                "value": "Elektrischer Energieeinsatz (Heizen)"
               }
             ]
           },
@@ -1815,7 +1815,7 @@
         "type": "yesoreyeram-infinity-datasource",
         "uid": "${DS_INFINITY}"
       },
-      "description": "### Elektrische Energie (Warmwasser)\nBisher eingesetzter elektrischer Energie für die Warmwasseraufbereitung inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Warmwasser)\nBisher erzeugte Wärmeenergie für die Warmwasseraufbereitung. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
+      "description": "### Elektrischer Energieeinsatz (Warmwasser)\nBisher eingesetzter elektrischer Energie für die Warmwasseraufbereitung inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Warmwasser)\nBisher erzeugte Wärmeenergie für die Warmwasseraufbereitung. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1841,7 +1841,7 @@
             "properties": [
               {
                 "id": "displayName",
-                "value": "Elektrische Energieaufnahme (Warmwasser)"
+                "value": "Elektrischer Energieeinsatz (Warmwasser)"
               }
             ]
           },
@@ -2907,7 +2907,7 @@
       "pluginVersion": "12.0.1",
       "targets": [
         {
-          "alias": "Elektrische Energieaufnahme",
+          "alias": "Elektrischer Energieeinsatz",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -2942,7 +2942,7 @@
           "tags": []
         },
         {
-          "alias": "Elektrische Energieaufnahme",
+          "alias": "Wärmeenergieabgabe",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
@@ -3670,7 +3670,7 @@
           "tags": []
         }
       ],
-      "title": "Thermische und elektrische Leistung (Intervall)",
+      "title": "Eingesetzte elektrische Leistung vs. abgegebene Wärmeleistung (Intervall)",
       "transformations": [
         {
           "id": "filterByValue",
@@ -3701,6 +3701,429 @@
         }
       ],
       "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "${DS_INFLUXDB}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 1,
+            "barWidthFactor": 0.6,
+            "drawStyle": "bars",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text"
+              }
+            ]
+          },
+          "unit": "kwatth"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "time:D.M."
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Warmwasser"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Heizung"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Temperatur"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Außentemperatur"
+            },
+            "properties": [
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 25
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#5794F2",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.axisColorMode",
+                "value": "series"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 39
+      },
+      "id": 62,
+      "options": {
+        "legend": {
+          "calcs": ["mean"],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.1",
+      "targets": [
+        {
+          "alias": "Außentemperatur",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "outdoortemp",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"value\") FROM \"outdoortemp\" WHERE time > '${__from:date:YYYY-MM}-01' AND time <= '${__to:date}' GROUP BY time(1d) fill(null) tz('Europe/Berlin')",
+          "rawQuery": false,
+          "refId": "outdoortemp",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Warmwasser",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "dhw.meter",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT spread(\"value\") FROM \"dhw.meter\" WHERE time > '${__from:date:YYYY-MM}-01' AND time < '${__to:date}' GROUP BY time(1d) fill(null) tz('Europe/Berlin')",
+          "rawQuery": false,
+          "refId": "dhw.meter",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Heizung",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "meterheat",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT spread(\"value\") FROM \"meterheat\" WHERE time > '${__from:date:YYYY-MM}-01' AND time < '${__to:date}' GROUP BY time(1d) fill(null) tz('Europe/Berlin')",
+          "rawQuery": false,
+          "refId": "meterheat",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Elektrischer Energieeinsatz: Heizung vs. Warmwasser (Intervall)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "${DS_INFLUXDB}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "#EAB839",
+                "value": 40
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Warmwassertemperatur"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 47
+      },
+      "id": 63,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.1",
+      "targets": [
+        {
+          "alias": "Warmwassertemperatur",
+          "groupBy": [
+            {
+              "params": ["$__interval"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "measurement": "curtemp2",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "curtemp2",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [5],
+                "type": "moving_average"
+              }
+            ]
+          ],
+          "tags": [],
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          }
+        }
+      ],
+      "title": "Warmwassertemperatur (Intervall)",
+      "type": "timeseries"
     }
   ],
   "schemaVersion": 41,
@@ -3714,8 +4137,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp)",
+  "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp + influxdb)",
   "uid": "grafana-dashboard-emsesp-influxdb_light",
-  "version": 0,
+  "version": 1,
   "weekStart": ""
 }

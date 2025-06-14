@@ -12,7 +12,7 @@ It exclusively retrieves data using [ems-esp](https://bosch-buderus-wp.github.io
 [ems-esp Live View (dark)](/images/grafana-emsesp_dark.png)
 
 To use this dashboard with your already running ems-esp, start by installing [Infinity](https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/) in your locally running Grafana instance.
-Once installed, navigate to _Dashboards_, select _New_ then _Import_ and and paste the contents of either the [light configuration](/dashboards/grafana-dashboard-emsesp_light.json) or the [dark configuration](/dashboards/grafana-dashboard-emsesp_dark.json) into the text field.
+Once installed, navigate to _Dashboards_, select _New_ then _Import_ and paste the contents of either the [light configuration](/dashboards/grafana-dashboard-emsesp_light.json) or the [dark configuration](/dashboards/grafana-dashboard-emsesp_dark.json) into the text field.
 
 Dashboards configurations:
 
@@ -46,6 +46,13 @@ The InfluxQL queries assume that each entity is stored in a measurement table wi
 | 1711056000008000000 | nrgtotal | 44.87 |
 
 If your InfluxDB is organized in a different structure, you might need to adapt the InfluxQL queries.
+
+### Further Additions
+
+If you are interested in daily electricity consumption for heating and domestic hot water and the temperature profile of domestic hot water, the following additions are also included in the above dashboards.
+
+![ems-esp+influxDB Dashboard Additions (light)](/images/grafana-dashboard-emsesp-influxdb-additions_light.png)
+[ems-esp+influxDB Dashboard Additions (dark)](/images/grafana-dashboard-emsesp-influxdb-additions_dark.png)
 
 Additional dashboards featuring historical data sourced from InfluxDB will be available soon.
 
