@@ -47,12 +47,46 @@ The InfluxQL queries assume that each entity is stored in a measurement table wi
 
 If your InfluxDB is organized in a different structure, you might need to adapt the InfluxQL queries.
 
+The dashboard requires the following entities to be stored in the InfluxDB:
+
+- [_metertotal_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#mit-2-nachkommastellen): if not available, try [_nrgconstotal_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#ohne-nachkommastellen)
+- [_nrgtotal_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#mit-2-nachkommastellen): if not available, try [_nrgsupptotal_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#ohne-nachkommastellen)
+- [_meterheat_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#mit-2-nachkommastellen): if not available, try [_nrgconscompheating_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#ohne-nachkommastellen)
+- [_dhw.meter_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#mit-2-nachkommastellen): if not available, try [_dhw.nrgconscomp_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#ohne-nachkommastellen)
+- [_outdoortemp_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#messwerte)
+- [_hpcurrpower_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#leistung)
+- [_curburnpow_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#status)
+- [_curtemp2_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#messwerte-1)
+
 ### Further Additions
 
-If you are interested in daily electricity consumption for heating and domestic hot water and the temperature profile of domestic hot water, the following additions are also included in the above dashboards.
+If you are interested in daily electricity consumption for heating and domestic hot water as well as the temperature profile of domestic hot water, the following visualizations are also included in the above dashboard.
 
 ![ems-esp+influxDB Dashboard Additions (light)](/images/grafana-dashboard-emsesp-influxdb-additions_light.png)
 [ems-esp+influxDB Dashboard Additions (dark)](/images/grafana-dashboard-emsesp-influxdb-additions_dark.png)
+
+### Sustainability
+
+Furthermore, the dashboard contains a section for sustainability with 2 visualizations:
+
+![ems-esp+influxDB Dashboard Sustainability (light)](/images/grafana-dashboard-emsesp-influxdb-sustainability_light.png)
+[ems-esp+influxDB Dashboard Sustainability (dark)](/images/grafana-dashboard-emsesp-influxdb-sustainability_dark.png)
+
+- _Daily CO<sub>2</sub> emissions of the heat pump compared to a gas heating system:_ \
+  This visualization requests the current CO<sub>2</sub> emissions of the consumed electricity in Germany (DE-LU) from [www.greengrid-compass.eu](https://www.greengrid-compass.eu).
+  The CO<sub>2</sub> of the gas heating system can be adjusted in the dashboard variable `$ref_heating_emissions`.
+  In the legend of the visualization you can see, how much CO<sub>2</sub> the heat pump has saved in the selected interval.
+  In the screenshot, the heat pump produced 128 kgCO<sub>2</sub>eq compared to a gas heating which produced 282 kgCO<sub>2</sub>eq - more than twice the amount.
+
+- _Share of renewable energy:_ \
+  This visualization requests the share of renewable energy in the German (DE-LU) energy consumption mix from [www.greengrid-compass.eu](https://www.greengrid-compass.eu).
+  In the legend you can also see the share of renewable energy weighted by electricity consumed by your heat pump.
+  In the screenshot the mean renewable share for the whole German electricity consumption was 50.2% in the observation interval.
+  The shown heat pump consumed in average 47.1% renewables.
+
+To use both visualizations, you have to create a free API key on [api-portal.eco2grid.com](https://api-portal.eco2grid.com/get-started) and add the API key as dashboard variable `$api_key_ggc` in Grafana.
+
+Please note that the visualizations assume that you solely use electricity from the grid - no own solar power.
 
 Additional dashboards featuring historical data sourced from InfluxDB will be available soon.
 
@@ -69,6 +103,10 @@ See the [LICENSE](./LICENSE) file for details.
 
 - https://grafana.com
 - https://emsesp.org
+- https://www.bosch-homecomfort.com
+- https://www.buderus.de/de/waermepumpe
+- https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/
+- https://www.greengrid-compass.eu/
 - https://www.svgrepo.com
 - https://excalidraw.com
 - https://svgtoexcalidraw.com

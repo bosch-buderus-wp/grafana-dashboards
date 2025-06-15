@@ -22,6 +22,20 @@
       "type": "datasource",
       "pluginId": "influxdb",
       "pluginName": "InfluxDB"
+    },
+    {
+      "name": "VAR_API_KEY_GGC",
+      "type": "constant",
+      "label": "API Key of Green Grid Compass",
+      "value": "",
+      "description": ""
+    },
+    {
+      "name": "VAR_REF_HEATING_EMISSIONS",
+      "type": "constant",
+      "label": "Reference Heating Emissions",
+      "value": "250",
+      "description": ""
     }
   ],
   "__elements": {},
@@ -30,6 +44,12 @@
       "type": "datasource",
       "id": "__expr__",
       "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "barchart",
+      "name": "Bar chart",
+      "version": ""
     },
     {
       "type": "panel",
@@ -47,7 +67,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "12.0.1"
+      "version": "12.0.1+security-01"
     },
     {
       "type": "datasource",
@@ -1019,7 +1039,7 @@
         },
         "showAdvancedTypes": true
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -1621,7 +1641,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -1751,7 +1771,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -1881,7 +1901,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2014,7 +2034,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2132,7 +2152,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2246,7 +2266,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2360,7 +2380,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2484,7 +2504,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2641,7 +2661,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2787,7 +2807,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "columns": [
@@ -2904,7 +2924,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "alias": "Elektrischer Energieeinsatz",
@@ -3025,7 +3045,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "datasource": {
@@ -3189,7 +3209,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "alias": "Heizung",
@@ -3202,8 +3222,6 @@
           "measurement": "meterheat",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT spread(\"value\") FROM \"meterheat\" WHERE time > '${__from:date:YYYY}-06-01' GROUP BY time(30d) fill(null) tz('Europe/Berlin')",
-          "rawQuery": false,
           "refId": "meterheat",
           "resultFormat": "time_series",
           "select": [
@@ -3218,8 +3236,7 @@
               }
             ]
           ],
-          "tags": [],
-          "tz": "Europe/Berlin"
+          "tags": []
         },
         {
           "alias": "Warmwasser",
@@ -3232,8 +3249,6 @@
           "measurement": "dhw.meter",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT spread(\"value\") FROM \"dhw.meter\" WHERE time > '${__from:date:YYYY}-06-01' GROUP BY time(30d) fill(null) tz('Europe/Berlin')",
-          "rawQuery": false,
           "refId": "dhw.meter",
           "resultFormat": "time_series",
           "select": [
@@ -3248,8 +3263,7 @@
               }
             ]
           ],
-          "tags": [],
-          "tz": "Europe/Berlin"
+          "tags": []
         }
       ],
       "title": "Heizen vs. WW (Intervall)",
@@ -3497,7 +3511,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "alias": "Außentemperatur",
@@ -3864,7 +3878,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "alias": "Außentemperatur",
@@ -4080,7 +4094,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1",
+      "pluginVersion": "12.0.1+security-01",
       "targets": [
         {
           "alias": "Warmwassertemperatur",
@@ -4124,12 +4138,805 @@
       ],
       "title": "Warmwassertemperatur (Intervall)",
       "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 55
+      },
+      "id": 66,
+      "panels": [],
+      "title": "Nachhaltigkeit (Intervall)",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Mixed --"
+      },
+      "description": "CO2 Emissionen der Wärmepumpe im Vergleich zu einer Gasheizung.\n\n### Wärmepumpe\nDie Emissionswerte des tagesdurchschnittlichen deutschen Strommixes (Lifecycle) werden über die API von [https://www.greengrid-compass.eu](https://www.greengrid-compass.eu) bezogen und mit der eingesetzten elektrischen Energie der Wärmepumpe an diesem Tag multipliziert. Hierfür muss ein API-Key auf [https://api-portal.eco2grid.com](https://api-portal.eco2grid.com/get-started) erstellt und in der Variablen `api_key_ggc` in den Dashboard-Einstellungen eingetragen werden.\n\n### Gasheizung\nDie Emissionen der Referenzgasheizung werden über die Grafana Variable `ref_heating_emissions = ${ref_heating_emissions} gCO2eq/kWh` definiert. Für die Berechnung der täglichen Emissionen werden die von der Wärmepumpe erzeugte Wärmeenergie mit den Emissionen der Gasheizung multipliziert.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          },
+          "unit": "massg"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Täglicher Energieeinsatz"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": false,
+                  "viz": true
+                }
+              },
+              {
+                "id": "unit",
+                "value": "kwatth"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CO2 Intensität GGC"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": true,
+                  "tooltip": false,
+                  "viz": true
+                }
+              },
+              {
+                "id": "unit",
+                "value": "gCO2eq/kWh"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Wärmepumpe"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e6c8ae",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Gasheizung als Referenz"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "massg"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#6e491f",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 56
+      },
+      "id": 64,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": ["mean", "sum"],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.0.1+security-01",
+      "targets": [
+        {
+          "alias": "Täglicher Energieeinsatz",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "metertotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "metertotal",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "columns": [
+            {
+              "selector": "interval",
+              "text": "Time",
+              "type": "timestamp"
+            },
+            {
+              "selector": "consumption_co2_intensity",
+              "text": "CO2 Intensität",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_INFINITY}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "hide": false,
+          "parser": "backend",
+          "refId": "GGC",
+          "root_selector": "zone_data",
+          "source": "url",
+          "type": "json",
+          "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
+          "url": " https://eco2grid.com/green-grid-compass/co2intensity/co2/summary/daily",
+          "url_options": {
+            "data": "",
+            "method": "GET",
+            "params": [
+              {
+                "key": "apikey",
+                "value": "$api_key_ggc"
+              },
+              {
+                "key": "start",
+                "value": "${__from:date}"
+              },
+              {
+                "key": "end",
+                "value": "${__to:date}"
+              },
+              {
+                "key": "emission_scope",
+                "value": "lifecycle"
+              },
+              {
+                "key": "zone_code",
+                "value": "DE_LU"
+              },
+              {
+                "key": "limit",
+                "value": "365"
+              }
+            ]
+          }
+        },
+        {
+          "alias": "Gasheizung als Referenz",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "nrgtotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "nrgtotal",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              },
+              {
+                "params": ["* $ref_heating_emissions"],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Tägliche CO2 Emissionen der Wärmepumpe vs. Gasheizung (Intervall)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Wärmepumpe",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Täglicher Energieeinsatz"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "CO2 Intensität GGC"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": false
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "CO2 Intensität GGC": 4,
+              "Gasheizung als Referenz": 2,
+              "Time": 0,
+              "Täglicher Energieeinsatz": 3,
+              "Wärmepumpe": 1
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Mixed --"
+      },
+      "description": "Der Anteil der erneuerbaren Energien des deutschen Stromverbrauchs wird von [https://www.greengrid-compass.eu](https://www.greengrid-compass.eu/) bezogen. Hierfür muss ein API-Key auf [https://api-portal.eco2grid.com](https://api-portal.eco2grid.com/get-started) erstellt und in der Variablen `api_key_ggc` in den Dashboard-Einstellungen eingetragen werden.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 1,
+            "barWidthFactor": 0.8,
+            "drawStyle": "bars",
+            "fillOpacity": 62,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Täglicher Energieeinsatz"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "kwatth"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#e6c8ae",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.axisColorMode",
+                "value": "series"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "right"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Anteil erneuerbarer Energien"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-green",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "displayName",
+                "value": "Anteil erneuerbarer Energien"
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.axisColorMode",
+                "value": "series"
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "left"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Anteil erneuerbarer Energien gewichtet mit tatsächlichem täglichen Energieeinsatz"
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 63
+      },
+      "id": 67,
+      "options": {
+        "legend": {
+          "calcs": ["min", "max", "mean"],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.1+security-01",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "interval",
+              "text": "Time",
+              "type": "timestamp"
+            },
+            {
+              "selector": "consumption_renewable_ratio",
+              "text": "Anteil erneuerbarer Energien",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_INFINITY}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "hide": false,
+          "parser": "backend",
+          "refId": "GGC",
+          "root_selector": "zone_data",
+          "source": "url",
+          "type": "json",
+          "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
+          "url": " https://eco2grid.com/green-grid-compass/co2intensity/co2/summary/daily",
+          "url_options": {
+            "data": "",
+            "method": "GET",
+            "params": [
+              {
+                "key": "apikey",
+                "value": "$api_key_ggc"
+              },
+              {
+                "key": "start",
+                "value": "${__from:date}"
+              },
+              {
+                "key": "end",
+                "value": "${__to:date}"
+              },
+              {
+                "key": "emission_scope",
+                "value": "lifecycle"
+              },
+              {
+                "key": "zone_code",
+                "value": "DE_LU"
+              },
+              {
+                "key": "limit",
+                "value": "365"
+              }
+            ]
+          }
+        },
+        {
+          "alias": "Täglicher Energieeinsatz",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "metertotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "metertotal",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Täglicher Energieeinsatz (temporary)",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "groupBy": [
+            {
+              "params": ["1d"],
+              "type": "time"
+            },
+            {
+              "params": ["null"],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "metertotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "metertotal-temporary",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": ["value"],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "spread"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Anteil erneuerbarer Energien und elektrischer Energieeinsatz pro Tag (Intervall)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Anteil erneuerbarer Energien GGC"
+                }
+              },
+              "operator": "*",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Täglicher Energieeinsatz (temporary)"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "Anteil erneuerbarer Energien": {
+                "aggregations": ["sum"]
+              },
+              "Anteil erneuerbarer Energien GGC": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz": {
+                "aggregations": ["sum"],
+                "operation": "aggregate"
+              },
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary)": {
+                "aggregations": ["sum"],
+                "operation": "aggregate"
+              },
+              "Time": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "Täglicher Energieeinsatz": {
+                "aggregations": ["sum"],
+                "operation": "groupby"
+              },
+              "Täglicher Energieeinsatz (temporary)": {
+                "aggregations": ["sum"],
+                "operation": "aggregate"
+              },
+              "Täglicher Energieeinsatz * Anteil erneuerbarer Energien GGC": {
+                "aggregations": ["sum"],
+                "operation": "aggregate"
+              },
+              "Täglicher Energieeinsatz2": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum)"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Täglicher Energieeinsatz (temporary) (sum)"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum)": true,
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum) / Täglicher Energieeinsatz (temporary) (sum)": false,
+              "Täglicher Energieeinsatz (sum)": false,
+              "Täglicher Energieeinsatz (temporary) (sum)": true
+            },
+            "includeByName": {},
+            "indexByName": {
+              "Anteil erneuerbarer Energien": 2,
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum)": 4,
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum) / Täglicher Energieeinsatz (temporary) (sum)": 5,
+              "Time": 0,
+              "Täglicher Energieeinsatz": 1,
+              "Täglicher Energieeinsatz (temporary) (sum)": 3
+            },
+            "renameByName": {
+              "Anteil erneuerbarer Energien GGC * Täglicher Energieeinsatz (temporary) (sum) / Täglicher Energieeinsatz (temporary) (sum)": "Anteil erneuerbarer Energien gewichtet mit tatsächlichem täglichen Energieeinsatz"
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
     }
   ],
   "schemaVersion": 41,
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "description": "API Key of https://www.greengrid-compass.eu",
+        "hide": 2,
+        "label": "API Key of Green Grid Compass",
+        "name": "api_key_ggc",
+        "query": "${VAR_API_KEY_GGC}",
+        "skipUrlSync": true,
+        "type": "constant",
+        "current": {
+          "value": "${VAR_API_KEY_GGC}",
+          "text": "${VAR_API_KEY_GGC}",
+          "selected": false
+        },
+        "options": [
+          {
+            "value": "${VAR_API_KEY_GGC}",
+            "text": "${VAR_API_KEY_GGC}",
+            "selected": false
+          }
+        ]
+      },
+      {
+        "description": "Emissions in gCO2eq/kWh of a reference heating system, e.g. a gas or oil heating system",
+        "hide": 2,
+        "label": "Reference Heating Emissions",
+        "name": "ref_heating_emissions",
+        "query": "${VAR_REF_HEATING_EMISSIONS}",
+        "skipUrlSync": true,
+        "type": "constant",
+        "current": {
+          "value": "${VAR_REF_HEATING_EMISSIONS}",
+          "text": "${VAR_REF_HEATING_EMISSIONS}",
+          "selected": false
+        },
+        "options": [
+          {
+            "value": "${VAR_REF_HEATING_EMISSIONS}",
+            "text": "${VAR_REF_HEATING_EMISSIONS}",
+            "selected": false
+          }
+        ]
+      }
+    ]
   },
   "time": {
     "from": "now/d",
@@ -4139,6 +4946,6 @@
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp + influxdb)",
   "uid": "grafana-dashboard-emsesp-influxdb_dark",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
