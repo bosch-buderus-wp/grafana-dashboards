@@ -2,6 +2,13 @@
 
 Grafana dashboards for Bosch Compress 5800/6800i & Buderus Logatherm WLW176/186i heat pumps.
 
+- ems-esp only: [ Live view & total statistics](#live-view-with-ems-esp)
+- ems-esp + InfluxDB (selectable interval):
+  - [Power consumption & heat output](#power-consumption--heat-output)
+  - [Daily consumption](#daily-consumption)
+  - [DHW profile](#dhw-profile)
+  - [Sustainability: CO<sub>2</sub> emissions & share of renewables](#sustainability)
+
 ## Live view with ems-esp
 
 This dashboard presents the current status of the heat pump in a nice overview along with essential metrics regarding its total runtime.
@@ -24,7 +31,7 @@ If you prefer to obtain values from InfluxDB rather than ems-esp, simply modify 
 All queries are named after the corresponding entity from ems-esp (list of [entity names](https://bosch-buderus-wp.github.io/docs/smarthome/entities)).
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue.
 
-## Additional historic data with InfluxDB
+## Power consumption & heat output
 
 If you already store the entities of your ems-esp in an InfluxDB, you can extend your dashboard with historic data visualizations.
 In addition to the live view above, the following dashboard provides a section with various visualizations depending on the selected time interval.
@@ -58,12 +65,16 @@ The dashboard requires the following entities to be stored in the InfluxDB:
 - [_curburnpow_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#status)
 - [_curtemp2_](https://bosch-buderus-wp.github.io/docs/smarthome/entities#messwerte-1)
 
-### Further Additions
+### Daily consumption
 
-If you are interested in daily electricity consumption for heating and domestic hot water as well as the temperature profile of domestic hot water, the following visualizations are also included in the above dashboard.
+If you are interested in daily electricity consumption for heating and domestic hot water, the following visualization is also included in the above dashboard.
 
 ![ems-esp+influxDB Dashboard Additions (light)](/images/grafana-dashboard-emsesp-influxdb-additions_light.png)
 [ems-esp+influxDB Dashboard Additions (dark)](/images/grafana-dashboard-emsesp-influxdb-additions_dark.png)
+
+### DHW profile
+
+If you’re curious about how much your domestic hot water (DHW) temperature drops and when the heating system kicks in, the dashboard also includes a visualization for this information (screenshot provided above).
 
 ### Sustainability
 
@@ -89,6 +100,20 @@ To use both visualizations, you have to create a free API key on [api-portal.eco
 Please note that the visualizations assume that you solely use electricity from the grid - no own solar power.
 
 Additional dashboards featuring historical data sourced from InfluxDB will be available soon.
+
+## FAQ
+
+**Q: I'm seeing "Field not found" errors in the visualizations. What can I do?**
+
+A: This usually indicates that Grafana can't reach your ems-esp gateway.
+Ensure that your ems-esp is running and accessible on your network.
+You can configure the ems-esp host by setting the Grafana variable `emsesp_host` in the Grafana dashboard settings.
+By default, it is configured to `http://ems-esp`.
+
+**Q: My visualizations, which use the InfluxDB, do not present any data. How can I fix this?**
+
+A: This error can occur if the entity names used in the Grafana panel queries do not exactly match the names stored in your InfluxDB or if your InfluxDB does not contain a dedicated measurement per entity.
+In these cases, simply adapt the queries according to your InfluxDB schema.
 
 ## Contributing
 

@@ -24,6 +24,13 @@
       "pluginName": "InfluxDB"
     },
     {
+      "name": "VAR_EMSESP_HOST",
+      "type": "constant",
+      "label": "Hostname or IP address of ems-esp gateway",
+      "value": "ems-esp",
+      "description": ""
+    },
+    {
       "name": "VAR_API_KEY_GGC",
       "type": "constant",
       "label": "API Key of Green Grid Compass",
@@ -1061,7 +1068,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/outdoortemp",
+          "url": "http://${emsesp_host}/api/boiler/outdoortemp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1088,7 +1095,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptl2",
+          "url": "http://${emsesp_host}/api/boiler/hptl2",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1115,7 +1122,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/curburnpow",
+          "url": "http://${emsesp_host}/api/boiler/curburnpow",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1142,7 +1149,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hpcompon",
+          "url": "http://${emsesp_host}/api/boiler/hpcompon",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1169,7 +1176,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hpcurrpower",
+          "url": "http://${emsesp_host}/api/boiler/hpcurrpower",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1196,7 +1203,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptr5",
+          "url": "http://${emsesp_host}/api/boiler/hptr5",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1223,7 +1230,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptr4",
+          "url": "http://${emsesp_host}/api/boiler/hptr4",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1250,7 +1257,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hpactivity",
+          "url": "http://${emsesp_host}/api/boiler/hpactivity",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1277,7 +1284,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptc3",
+          "url": "http://${emsesp_host}/api/boiler/hptc3",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1304,7 +1311,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptr3",
+          "url": "http://${emsesp_host}/api/boiler/hptr3",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1331,7 +1338,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/pc0flow",
+          "url": "http://${emsesp_host}/api/boiler/pc0flow",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1358,7 +1365,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptc1",
+          "url": "http://${emsesp_host}/api/boiler/hptc1",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1385,7 +1392,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/hptc0",
+          "url": "http://${emsesp_host}/api/boiler/hptc0",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1412,7 +1419,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/curflowtemp",
+          "url": "http://${emsesp_host}/api/boiler/curflowtemp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1439,7 +1446,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/curtemp2",
+          "url": "http://${emsesp_host}/api/boiler/curtemp2",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1466,7 +1473,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/curtemp",
+          "url": "http://${emsesp_host}/api/boiler/curtemp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1493,7 +1500,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/pc1flow",
+          "url": "http://${emsesp_host}/api/boiler/pc1flow",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1520,7 +1527,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/auxheaterstatus",
+          "url": "http://${emsesp_host}/api/boiler/auxheaterstatus",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1547,7 +1554,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/thermostat/targetflowtemp",
+          "url": "http://${emsesp_host}/api/thermostat/targetflowtemp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1664,7 +1671,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconstotal",
+          "url": "http://${emsesp_host}/api/boiler/nrgconstotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1690,7 +1697,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsupptotal",
+          "url": "http://${emsesp_host}/api/boiler/nrgsupptotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1794,7 +1801,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscompheating",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1820,7 +1827,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsuppheating",
+          "url": "http://${emsesp_host}/api/boiler/nrgsuppheating",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1924,7 +1931,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscomp",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1950,7 +1957,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsupp",
+          "url": "http://${emsesp_host}/api/boiler/nrgsupp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2056,7 +2063,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/uptimecontrol",
+          "url": "http://${emsesp_host}/api/boiler/uptimecontrol",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2084,7 +2091,7 @@
           "source": "url",
           "summarizeAlias": "",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/totalcompstarts",
+          "url": "http://${emsesp_host}/api/boiler/totalcompstarts",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2174,7 +2181,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconstotal",
+          "url": "http://${emsesp_host}/api/boiler/nrgconstotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2201,7 +2208,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsupptotal",
+          "url": "http://${emsesp_host}/api/boiler/nrgsupptotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2288,7 +2295,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscompheating",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2315,7 +2322,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsuppheating",
+          "url": "http://${emsesp_host}/api/boiler/nrgsuppheating",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2402,7 +2409,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgsupp",
+          "url": "http://${emsesp_host}/api/boiler/nrgsupp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2429,7 +2436,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscomp",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2527,7 +2534,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/uptimecontrol",
+          "url": "http://${emsesp_host}/api/boiler/uptimecontrol",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2554,7 +2561,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/totalcompstarts",
+          "url": "http://${emsesp_host}/api/boiler/totalcompstarts",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2683,7 +2690,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscompheating",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2710,7 +2717,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscomp",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2829,7 +2836,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/nrgconscomptotal",
+          "url": "http://${emsesp_host}/api/boiler/nrgconscomptotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2856,7 +2863,7 @@
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://ems-esp/api/boiler/auxelecheatnrgconstotal",
+          "url": "http://${emsesp_host}/api/boiler/auxelecheatnrgconstotal",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -4895,6 +4902,27 @@
   "templating": {
     "list": [
       {
+        "description": "Hostname or IP address of the ems-esp gateway, e.g. ems-esp or 192.168.1.99",
+        "hide": 2,
+        "label": "Hostname or IP address of ems-esp gateway",
+        "name": "emsesp_host",
+        "query": "${VAR_EMSESP_HOST}",
+        "skipUrlSync": true,
+        "type": "constant",
+        "current": {
+          "value": "${VAR_EMSESP_HOST}",
+          "text": "${VAR_EMSESP_HOST}",
+          "selected": false
+        },
+        "options": [
+          {
+            "value": "${VAR_EMSESP_HOST}",
+            "text": "${VAR_EMSESP_HOST}",
+            "selected": false
+          }
+        ]
+      },
+      {
         "description": "API Key of https://www.greengrid-compass.eu",
         "hide": 2,
         "label": "API Key of Green Grid Compass",
@@ -4946,6 +4974,6 @@
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp + influxdb)",
   "uid": "grafana-dashboard-emsesp-influxdb_light",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
