@@ -946,7 +946,7 @@
                 "vertical": "top"
               },
               "links": [],
-              "name": "auxheaterstatus",
+              "name": "auxheaterlevel",
               "placement": {
                 "height": 50.000003814697266,
                 "left": 516,
@@ -1483,11 +1483,11 @@
           "global_query_id": "",
           "hide": false,
           "parser": "backend",
-          "refId": "auxheaterstatus",
+          "refId": "auxheaterlevel",
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/auxheaterstatus",
+          "url": "http://${emsesp_host}/api/boiler/auxheaterlevel",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -2869,6 +2869,6 @@
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp)",
   "uid": "grafana-dashboard-emsesp_dark",
-  "version": 4,
+  "version": 5,
   "weekStart": ""
 }
