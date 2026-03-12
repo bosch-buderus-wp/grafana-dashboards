@@ -95,7 +95,32 @@ Furthermore, the dashboard contains a section for sustainability with 2 visualiz
   In the screenshot the mean renewable share for the whole German electricity consumption was 50.2% in the observation interval.
   The shown heat pump consumed in average 47.1% renewables.
 
-To use both visualizations, you have to create a free API key on [api-portal.eco2grid.com](https://api-portal.eco2grid.com/get-started) and add the API key as dashboard variable `$api_key_ggc` in Grafana.
+To use both visualizations, you have to create a free API client for the Green Grid Compass API:
+
+Get Client ID/Secret:
+
+1. Create an account on https://www.traxes.io/
+2. Navigate to `Applications & APIs` and press `Add application`
+3. Enter a name like `GreenGridCompass-Grafana` and press `Continue`
+4. Note down `Client ID` and `Client secret` and press `Continue`
+5. Enable `Green Grid Compass` and press `Add application`
+
+In Grafana main menu:
+
+1. In the Grafana main menu, navigate to `Connections` --> `Data sources` and press `Add new data source`
+2. Search and select Infinity datasource
+3. Select a name like `Infinity-GGC` - to differentiate from the other Infinity datasource which we use for requests without authentication
+4. Select `Authentication` and then `OAuth2` and fill in:
+   - Grant Type: Client Credentials
+   - Auth Style: In Params
+   - Client ID: as noted above
+   - Client Secret: as noted above
+   - Token URL: https://signin.energy/am/oauth2/realms/root/realms/difesp/access_token
+   - Scopes: esp
+   - Allowed hosts:
+     - https://signin.energy
+     - https://explore.traxes.io
+5. Press `Save & Test`
 
 Please note that the visualizations assume that you solely use electricity from the grid - no own solar power.
 

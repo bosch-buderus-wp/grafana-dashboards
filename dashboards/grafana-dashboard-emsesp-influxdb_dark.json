@@ -3,7 +3,7 @@
     {
       "name": "DS_INFINITY",
       "label": "Infinity",
-      "description": "",
+      "description": "Requests to ems-esp",
       "type": "datasource",
       "pluginId": "yesoreyeram-infinity-datasource",
       "pluginName": "Infinity"
@@ -31,11 +31,12 @@
       "description": ""
     },
     {
-      "name": "VAR_API_KEY_GGC",
-      "type": "constant",
-      "label": "API Key of Green Grid Compass",
-      "value": "",
-      "description": ""
+      "name": "DS_INFINITY-GGC",
+      "label": "Infinity-GGC",
+      "description": "Requests to Green-Grid-Compass",
+      "type": "datasource",
+      "pluginId": "yesoreyeram-infinity-datasource",
+      "pluginName": "Infinity"
     },
     {
       "name": "VAR_REF_HEATING_EMISSIONS",
@@ -74,7 +75,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "12.0.1+security-01"
+      "version": "12.1.1"
     },
     {
       "type": "datasource",
@@ -169,7 +170,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               },
               {
                 "color": "red",
@@ -1046,7 +1048,7 @@
         },
         "showAdvancedTypes": true
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -1593,7 +1595,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           },
@@ -1648,7 +1651,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -1723,7 +1726,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           },
@@ -1778,7 +1782,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -1853,7 +1857,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           },
@@ -1908,7 +1913,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -1983,7 +1988,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           }
@@ -2041,7 +2047,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2132,7 +2138,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": 0
               }
             ]
           }
@@ -2159,7 +2166,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2246,7 +2253,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": 0
               }
             ]
           }
@@ -2273,7 +2281,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2360,7 +2368,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": 0
               }
             ]
           }
@@ -2387,7 +2396,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2475,7 +2484,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": 0
               },
               {
                 "color": "#EAB839",
@@ -2511,7 +2521,7 @@
         "showThresholdMarkers": false,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2668,7 +2678,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2814,7 +2824,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
@@ -2901,7 +2911,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           },
@@ -2931,7 +2942,7 @@
         "textMode": "value_and_name",
         "wideLayout": false
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Elektrischer Energieeinsatz",
@@ -3025,7 +3036,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red"
+                "color": "red",
+                "value": 0
               }
             ]
           }
@@ -3052,7 +3064,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "datasource": {
@@ -3216,7 +3228,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Heizung",
@@ -3325,7 +3337,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "orange"
+                "color": "orange",
+                "value": 0
               }
             ]
           },
@@ -3518,7 +3531,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Außentemperatur",
@@ -3771,7 +3784,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text"
+                "color": "text",
+                "value": 0
               }
             ]
           },
@@ -3885,7 +3899,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Außentemperatur",
@@ -4053,7 +4067,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               },
               {
                 "color": "#EAB839",
@@ -4101,7 +4116,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Warmwassertemperatur",
@@ -4196,7 +4211,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               }
             ]
           },
@@ -4308,7 +4324,7 @@
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "alias": "Täglicher Energieeinsatz",
@@ -4349,19 +4365,19 @@
         {
           "columns": [
             {
-              "selector": "interval",
+              "selector": "timestamp",
               "text": "Time",
               "type": "timestamp"
             },
             {
-              "selector": "consumption_co2_intensity",
+              "selector": "value",
               "text": "CO2 Intensität",
               "type": "number"
             }
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "uid": "${DS_INFINITY-GGC}"
           },
           "filters": [],
           "format": "table",
@@ -4369,19 +4385,15 @@
           "hide": false,
           "parser": "backend",
           "refId": "GGC",
-          "root_selector": "zone_data",
+          "root_selector": "measurements.measurementValues",
           "source": "url",
           "type": "json",
           "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
-          "url": " https://eco2grid.com/green-grid-compass/co2intensity/co2/summary/daily",
+          "url": "https://explore.traxes.io/greengrid-compass/v1/co2-intensity",
           "url_options": {
             "data": "",
             "method": "GET",
             "params": [
-              {
-                "key": "apikey",
-                "value": "$api_key_ggc"
-              },
               {
                 "key": "start",
                 "value": "${__from:date}"
@@ -4391,16 +4403,20 @@
                 "value": "${__to:date}"
               },
               {
-                "key": "emission_scope",
-                "value": "lifecycle"
-              },
-              {
-                "key": "zone_code",
+                "key": "zone",
                 "value": "DE_LU"
               },
               {
-                "key": "limit",
-                "value": "365"
+                "key": "time-resolution",
+                "value": "Daily"
+              },
+              {
+                "key": "calculation-type",
+                "value": "Consumption"
+              },
+              {
+                "key": "emission-type",
+                "value": "Lifecycle"
               }
             ]
           }
@@ -4541,7 +4557,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": 0
               }
             ]
           },
@@ -4644,24 +4661,24 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.0.1+security-01",
+      "pluginVersion": "12.1.1",
       "targets": [
         {
           "columns": [
             {
-              "selector": "interval",
+              "selector": "timestamp",
               "text": "Time",
               "type": "timestamp"
             },
             {
-              "selector": "consumption_renewable_ratio",
+              "selector": "value",
               "text": "Anteil erneuerbarer Energien",
               "type": "number"
             }
           ],
           "datasource": {
             "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "uid": "${DS_INFINITY-GGC}"
           },
           "filters": [],
           "format": "table",
@@ -4669,19 +4686,15 @@
           "hide": false,
           "parser": "backend",
           "refId": "GGC",
-          "root_selector": "zone_data",
+          "root_selector": "measurements.measurementValues",
           "source": "url",
           "type": "json",
           "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
-          "url": " https://eco2grid.com/green-grid-compass/co2intensity/co2/summary/daily",
+          "url": "https://explore.traxes.io/greengrid-compass/v1/renewable-share",
           "url_options": {
             "data": "",
             "method": "GET",
             "params": [
-              {
-                "key": "apikey",
-                "value": "$api_key_ggc"
-              },
               {
                 "key": "start",
                 "value": "${__from:date}"
@@ -4691,16 +4704,16 @@
                 "value": "${__to:date}"
               },
               {
-                "key": "emission_scope",
-                "value": "lifecycle"
-              },
-              {
-                "key": "zone_code",
+                "key": "zone",
                 "value": "DE_LU"
               },
               {
-                "key": "limit",
-                "value": "365"
+                "key": "time-resolution",
+                "value": "Daily"
+              },
+              {
+                "key": "calculation-type",
+                "value": "Consumption"
               }
             ]
           }
@@ -4923,27 +4936,6 @@
         ]
       },
       {
-        "description": "API Key of https://www.greengrid-compass.eu",
-        "hide": 2,
-        "label": "API Key of Green Grid Compass",
-        "name": "api_key_ggc",
-        "query": "${VAR_API_KEY_GGC}",
-        "skipUrlSync": true,
-        "type": "constant",
-        "current": {
-          "value": "${VAR_API_KEY_GGC}",
-          "text": "${VAR_API_KEY_GGC}",
-          "selected": false
-        },
-        "options": [
-          {
-            "value": "${VAR_API_KEY_GGC}",
-            "text": "${VAR_API_KEY_GGC}",
-            "selected": false
-          }
-        ]
-      },
-      {
         "description": "Emissions in gCO2eq/kWh of a reference heating system, e.g. a gas or oil heating system",
         "hide": 2,
         "label": "Reference Heating Emissions",
@@ -4974,6 +4966,6 @@
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp + influxdb)",
   "uid": "grafana-dashboard-emsesp-influxdb_dark",
-  "version": 4,
+  "version": 5,
   "weekStart": ""
 }
