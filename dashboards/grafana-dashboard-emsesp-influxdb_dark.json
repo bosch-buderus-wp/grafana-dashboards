@@ -1053,492 +1053,7 @@
         {
           "columns": [
             {
-              "selector": "value",
-              "text": "Außentemperatur",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "outdoortemp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/outdoortemp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Außenlufteintrittstemperatur (TL2)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptl2",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptl2",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Aktuelle Brennerleistung",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "curburnpow",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/curburnpow",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "WP Kompressor",
-              "type": "string"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hpcompon",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hpcompon",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "akt. Kompressorleistung",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hpcurrpower",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hpcurrpower",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kompressoreingang (TR5)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptr5",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptr5",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Verdampfereingang (TR4)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptr4",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptr4",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kompressoraktivität",
-              "type": "string"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hpactivity",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hpactivity",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kondensatortemperatur (TC3)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptc3",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptc3",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kältemittel (flüssig) (TR3)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptr3",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptr3",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Durchfluss PC0",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "pc0flow",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/pc0flow",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kältemittelvorlauf (TC1)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptc1",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptc1",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Kältemittelrücklauf (TC0)",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "hptc0",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/hptc0",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Aktuelle Vorlauftemperatur",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "curflowtemp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/curflowtemp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "WWK aktuelle externe Temperatur",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "curtemp2",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/curtemp2",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "WWK aktuelle interne Temperatur",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "curtemp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/curtemp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Durchfluss PC1",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "pc1flow",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/pc1flow",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Zusatzheizerstatus",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "auxheaterlevel",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/auxheaterlevel",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
+              "selector": "hc1.targetflowtemp",
               "text": "HK1 berechnete Vorlauftemperatur",
               "type": "number"
             }
@@ -1550,13 +1065,174 @@
           "filters": [],
           "format": "table",
           "global_query_id": "",
-          "hide": false,
           "parser": "backend",
-          "refId": "targetflowtemp",
+          "refId": "thermostat",
           "root_selector": "",
           "source": "url",
           "type": "json",
-          "url": "http://${emsesp_host}/api/thermostat/targetflowtemp",
+          "url": "http://${emsesp_host}/api/thermostat",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        },
+        {
+          "columns": [
+            {
+              "selector": "outdoortemp",
+              "text": "Außentemperatur",
+              "type": "number"
+            },
+            {
+              "selector": "hptl2",
+              "text": "Außenlufteintrittstemperatur (TL2)",
+              "type": "number"
+            },
+            {
+              "selector": "curburnpow",
+              "text": "Aktuelle Brennerleistung",
+              "type": "number"
+            },
+            {
+              "selector": "hpcompon",
+              "text": "WP Kompressor",
+              "type": "string"
+            },
+            {
+              "selector": "hpcurrpower",
+              "text": "akt. Kompressorleistung",
+              "type": "number"
+            },
+            {
+              "selector": "hptr5",
+              "text": "Kompressoreingang (TR5)",
+              "type": "number"
+            },
+            {
+              "selector": "hptr4",
+              "text": "Verdampfereingang (TR4)",
+              "type": "number"
+            },
+            {
+              "selector": "hpactivity",
+              "text": "Kompressoraktivität",
+              "type": "string"
+            },
+            {
+              "selector": "hptc3",
+              "text": "Kondensatortemperatur (TC3)",
+              "type": "number"
+            },
+            {
+              "selector": "hptr3",
+              "text": "Kältemittel (flüssig) (TR3)",
+              "type": "number"
+            },
+            {
+              "selector": "pc0flow",
+              "text": "Durchfluss PC0",
+              "type": "number"
+            },
+            {
+              "selector": "hptc1",
+              "text": "Kältemittelvorlauf (TC1)",
+              "type": "number"
+            },
+            {
+              "selector": "hptc0",
+              "text": "Kältemittelrücklauf (TC0)",
+              "type": "number"
+            },
+            {
+              "selector": "curflowtemp",
+              "text": "Aktuelle Vorlauftemperatur",
+              "type": "number"
+            },
+            {
+              "selector": "dhw.curtemp2",
+              "text": "WWK aktuelle externe Temperatur",
+              "type": "number"
+            },
+            {
+              "selector": "dhw.curtemp",
+              "text": "WWK aktuelle interne Temperatur",
+              "type": "number"
+            },
+            {
+              "selector": "pc1flow",
+              "text": "Durchfluss PC1",
+              "type": "number"
+            },
+            {
+              "selector": "auxheaterlevel",
+              "text": "Zusatzheizerstatus",
+              "type": "number"
+            },
+            {
+              "selector": "nrgconstotal",
+              "text": "Elektrische Energieaufnahme",
+              "type": "number"
+            },
+            {
+              "selector": "nrgsupptotal",
+              "text": "Wärmeenergieabgabe",
+              "type": "number"
+            },
+            {
+              "selector": "nrgconscompheating",
+              "text": "Elektrische Energieaufnahme (Heizen)",
+              "type": "number"
+            },
+            {
+              "selector": "nrgsuppheating",
+              "text": "Wärmeenergieabgabe (Heizen)",
+              "type": "number"
+            },
+            {
+              "selector": "dhw.nrgconscomp",
+              "text": "Elektrische Energieaufnahme (Warmwasser)",
+              "type": "number"
+            },
+            {
+              "selector": "dhw.nrgsupp",
+              "text": "Wärmeenergieabgabe (Warmwasser)",
+              "type": "number"
+            },
+            {
+              "selector": "uptimecontrol",
+              "text": "Laufzeit",
+              "type": "number"
+            },
+            {
+              "selector": "totalcompstarts",
+              "text": "Kompressorstarts",
+              "type": "number"
+            },
+            {
+              "selector": "nrgconscomptotal",
+              "text": "Elektrische Energieaufnahme (Wärmepumpe)",
+              "type": "number"
+            },
+            {
+              "selector": "auxelecheatnrgconstotal",
+              "text": "Elektrische Energieaufnahme (Zuheizer)",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_INFINITY}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "hide": false,
+          "parser": "backend",
+          "refId": "boiler",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "http://${emsesp_host}/api/boiler",
           "url_options": {
             "data": "",
             "method": "GET"
@@ -1581,8 +1257,8 @@
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "### Elektrischer Energieeinsatz\nBisher eingesetzte elektrische Energie inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie\nBisher erzeugte Wärmeenergie. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
@@ -1601,33 +1277,7 @@
             ]
           },
           "unit": "kwatth"
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "nrgconstotal"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Elektrischer Energieeinsatz"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "nrgsupptotal"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Wärmeenergieabgabe"
-              }
-            ]
-          }
-        ]
+        }
       },
       "gridPos": {
         "h": 5,
@@ -1654,66 +1304,34 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconstotal",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgconstotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconstotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgsupptotal",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgsupptotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsupptotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Gesamtenergie",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "boiler Elektrische Energieaufnahme",
+                "boiler Wärmeenergieabgabe"
+              ]
+            }
+          }
+        }
+      ],
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "### Elektrischer Energieeinsatz (Heizen)\nBisher eingesetzte elektrische Energie für den Heizbetrieb inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Heizen)\nBisher erzeugte Wärmeenergie im Heizbetrieb. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
@@ -1733,32 +1351,7 @@
           },
           "unit": "kwatth"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Energieverbrauch Kompressor heizen"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Elektrischer Energieeinsatz (Heizen)"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Gesamte Energieabgabe Heizen"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Wärmeenergieabgabe (Heizen)"
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 5,
@@ -1785,66 +1378,34 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Energieverbrauch Kompressor heizen",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgconscompheating",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Gesamte Energieabgabe Heizen",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgsuppheating",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsuppheating",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Gesamtenergie Heizen",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "boiler Elektrische Energieaufnahme (Heizen)",
+                "boiler Wärmeenergieabgabe (Heizen)"
+              ]
+            }
+          }
+        }
+      ],
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "### Elektrischer Energieeinsatz (Warmwasser)\nBisher eingesetzter elektrischer Energie für die Warmwasseraufbereitung inkl. Kompressor, Pumpen, Elektronik, Kondensatwannenheizung, ...\n\n### Wärmeenergie (Warmwasser)\nBisher erzeugte Wärmeenergie für die Warmwasseraufbereitung. \nEnergieverlust beim Abtauen ist bereits abgezogen.",
       "fieldConfig": {
@@ -1864,32 +1425,7 @@
           },
           "unit": "kwatth"
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Energieverbrauch Kompressor heizen"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Elektrischer Energieeinsatz (Warmwasser)"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Gesamte Energieabgabe Heizen"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Wärmeenergieabgabe (Warmwasser)"
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 5,
@@ -1916,66 +1452,34 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Energieverbrauch Kompressor heizen",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgconscomp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Gesamte Energieabgabe Heizen",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgsupp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsupp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Gesamtenergie WW",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "boiler Elektrische Energieaufnahme (Warmwasser)",
+                "boiler Wärmeenergieabgabe (Warmwasser)"
+              ]
+            }
+          }
+        }
+      ],
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "",
       "fieldConfig": {
@@ -1998,7 +1502,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Gesamtbetriebszeit Heizen"
+              "options": "Laufzeit"
             },
             "properties": [
               {
@@ -2008,18 +1512,6 @@
               {
                 "id": "displayName",
                 "value": "Gesamtlaufzeit"
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Gesamtkompressorstarts"
-            },
-            "properties": [
-              {
-                "id": "displayName",
-                "value": "Kompressorstarts"
               }
             ]
           }
@@ -2050,61 +1542,25 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Gesamtbetriebszeit Heizen",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "uptimecontrol",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/uptimecontrol",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "Gesamtkompressorstarts",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "totalcompstarts",
-          "root_selector": "",
-          "source": "url",
-          "summarizeAlias": "",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/totalcompstarts",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Laufzeit & Starts",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": ["boiler Laufzeit", "boiler Kompressorstarts"]
+            }
+          }
+        }
+      ],
       "type": "stat"
     },
     {
@@ -2122,8 +1578,8 @@
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "Die Arbeitszahl über die gesamte Laufzeit ist der Quotient aus bisher erzeugter Wärmeenergie und bisher eingesetzter elektrischer Energie.",
       "fieldConfig": {
@@ -2159,7 +1615,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [],
-          "fields": "/^Arbeitszahl$/",
+          "fields": "/.*/",
           "values": false
         },
         "showThresholdLabels": false,
@@ -2169,76 +1625,49 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconstotal",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgconstotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconstotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgsupptotal",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgsupptotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsupptotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "${DS_EXPRESSION}"
-          },
-          "expression": "$nrgsupptotal / $nrgconstotal",
-          "hide": false,
-          "refId": "Arbeitszahl",
-          "type": "math"
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Arbeitszahl",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Wärmeenergieabgabe"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Elektrische Energieaufnahme"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "gauge"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "Die Arbeitszahl über die gesamte Laufzeit ist der Quotient aus bisher erzeugter Wärmeenergie im Heizbetrieb und bisher eingesetzter elektrischer Energie im Heizbetrieb.",
       "fieldConfig": {
@@ -2274,7 +1703,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [],
-          "fields": "/^Arbeitszahl$/",
+          "fields": "/.*/",
           "values": false
         },
         "showThresholdLabels": false,
@@ -2284,76 +1713,49 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconscompheating",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgconscompheating",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgsuppheating",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgsuppheating",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsuppheating",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "${DS_EXPRESSION}"
-          },
-          "expression": "$nrgsuppheating / $nrgconscompheating",
-          "hide": false,
-          "refId": "Arbeitszahl",
-          "type": "math"
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Arbeitszahl Heizen",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Wärmeenergieabgabe (Heizen)"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Elektrische Energieaufnahme (Heizen)"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "gauge"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "Die Arbeitszahl über die gesamte Laufzeit ist der Quotient aus bisher erzeugter Wärmeenergie im Warmwasserbetrieb und bisher eingesetzter elektrischer Energie im Wasserwasserbetrieb.",
       "fieldConfig": {
@@ -2389,7 +1791,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [],
-          "fields": "/^Arbeitszahl$/",
+          "fields": "/.*/",
           "values": false
         },
         "showThresholdLabels": false,
@@ -2399,76 +1801,49 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconscompheating",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgsupp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgsupp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgsuppheating",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgconscomp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "${DS_EXPRESSION}"
-          },
-          "expression": "$nrgsupp / $nrgconscomp",
-          "hide": false,
-          "refId": "Arbeitszahl",
-          "type": "math"
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Arbeitszahl Warmwasser",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Wärmeenergieabgabe (Warmwasser)"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Elektrische Energieaufnahme (Warmwasser)"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "gauge"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "description": "Zur Schonung des Kompressors und für einen effizienten Betrieb sollte die Wärmepumpe möglichst kontinuierlich laufen mit möglichst wenig Takten.",
       "fieldConfig": {
@@ -2514,7 +1889,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [],
-          "fields": "/^runtimePerStarts$/",
+          "fields": "/.*/",
           "values": false
         },
         "showThresholdLabels": false,
@@ -2524,77 +1899,49 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "uptimecontrol",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": true,
-          "parser": "backend",
-          "refId": "uptimecontrol",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/uptimecontrol",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "totalcompstarts",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": true,
-          "parser": "backend",
-          "refId": "totalcompstarts",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/totalcompstarts",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "datasource": {
-            "type": "__expr__",
-            "uid": "${DS_EXPRESSION}"
-          },
-          "expression": "$uptimecontrol / $totalcompstarts",
-          "hide": false,
-          "refId": "runtimePerStarts",
-          "type": "math"
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "⌀ Laufzeit / Start",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "",
+            "binary": {
+              "left": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Laufzeit"
+                }
+              },
+              "operator": "/",
+              "right": {
+                "matcher": {
+                  "id": "byName",
+                  "options": "boiler Kompressorstarts"
+                }
+              }
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            },
+            "replaceFields": true
+          }
+        }
+      ],
       "type": "gauge"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "fieldConfig": {
         "defaults": {
@@ -2615,7 +1962,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "nrgconscompheating"
+              "options": "Elektrische Energieaufnahme (Heizen)"
             },
             "properties": [
               {
@@ -2634,7 +1981,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "nrgconscomp"
+              "options": "Elektrische Energieaufnahme (Warmwasser)"
             },
             "properties": [
               {
@@ -2681,66 +2028,34 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconscompheating",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgconscompheating",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscompheating",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconscomp",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "nrgconscomp",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscomp",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "Heizen vs. Warmwasser",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "boiler Elektrische Energieaufnahme (Warmwasser)",
+                "boiler Elektrische Energieaufnahme (Heizen)"
+              ]
+            }
+          }
+        }
+      ],
       "type": "piechart"
     },
     {
       "datasource": {
-        "type": "yesoreyeram-infinity-datasource",
-        "uid": "${DS_INFINITY}"
+        "type": "datasource",
+        "uid": "-- Dashboard --"
       },
       "fieldConfig": {
         "defaults": {
@@ -2761,7 +2076,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "nrgconscomptotal"
+              "options": "Elektrische Energieaufnahme (Wärmepumpe)"
             },
             "properties": [
               {
@@ -2780,7 +2095,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "auxelecheatnrgconstotal"
+              "options": "Elektrische Energieaufnahme (Zuheizer)"
             },
             "properties": [
               {
@@ -2827,60 +2142,28 @@
       "pluginVersion": "12.1.1",
       "targets": [
         {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "nrgconscomptotal",
-              "type": "number"
-            }
-          ],
           "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
+            "type": "datasource",
+            "uid": "-- Dashboard --"
           },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "parser": "backend",
-          "refId": "nrgconscomptotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/nrgconscomptotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
-        },
-        {
-          "columns": [
-            {
-              "selector": "value",
-              "text": "auxelecheatnrgconstotal",
-              "type": "number"
-            }
-          ],
-          "datasource": {
-            "type": "yesoreyeram-infinity-datasource",
-            "uid": "${DS_INFINITY}"
-          },
-          "filters": [],
-          "format": "table",
-          "global_query_id": "",
-          "hide": false,
-          "parser": "backend",
-          "refId": "auxelecheatnrgconstotal",
-          "root_selector": "",
-          "source": "url",
-          "type": "json",
-          "url": "http://${emsesp_host}/api/boiler/auxelecheatnrgconstotal",
-          "url_options": {
-            "data": "",
-            "method": "GET"
-          }
+          "panelId": 60,
+          "refId": "A"
         }
       ],
       "title": "WP vs. Zuheizer",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "boiler Elektrische Energieaufnahme (Wärmepumpe)",
+                "boiler Elektrische Energieaufnahme (Zuheizer)"
+              ]
+            }
+          }
+        }
+      ],
       "type": "piechart"
     },
     {
@@ -4389,7 +3672,7 @@
           "source": "url",
           "type": "json",
           "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
-          "url": "https://explore.traxes.io/greengrid-compass/v1/co2-intensity",
+          "url": "https://explore.traxes.io/explore/greengrid-compass/v1/co2-intensity",
           "url_options": {
             "data": "",
             "method": "GET",
@@ -4690,7 +3973,7 @@
           "source": "url",
           "type": "json",
           "uql": "parse-json\n| jsonata \"$zip($[0].days,$[0].data)\"\n| project \"Time\"=todatetime(format_\"0\"), \"Renewable Share\"=\"1\"",
-          "url": "https://explore.traxes.io/greengrid-compass/v1/renewable-share",
+          "url": "https://explore.traxes.io/explore/greengrid-compass/v1/renewable-share",
           "url_options": {
             "data": "",
             "method": "GET",
@@ -4966,6 +4249,6 @@
   "timezone": "",
   "title": "Bosch CS5800/6800i & Buderus WLW176/186 Wärmepumpe (ems-esp + influxdb)",
   "uid": "grafana-dashboard-emsesp-influxdb_dark",
-  "version": 5,
+  "version": 6,
   "weekStart": ""
 }
