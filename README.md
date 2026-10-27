@@ -2,12 +2,49 @@
 
 Grafana dashboards for Bosch Compress 5800/6800i & Buderus Logatherm WLW176/186i heat pumps.
 
+- local API via KF40 RF or MX400 gateway: [ Live view & various statistics](#live-view--various-statistics-with-local-api)
 - ems-esp only: [ Live view & total statistics](#live-view-with-ems-esp)
 - ems-esp + InfluxDB (selectable interval):
   - [Power consumption & heat output](#power-consumption--heat-output)
   - [Daily consumption](#daily-consumption)
   - [DHW profile](#dhw-profile)
   - [Sustainability: CO<sub>2</sub> emissions & share of renewables](#sustainability)
+
+## Live view & various statistics with local API
+
+If you own the Bosch KF40 RF or Buderus MX400 gateway, this is the easiest way to get a nice overview of live data and various statistics.
+
+![Local API video (light)](/images/grafana-localapi_light.gif)
+[Local API video (dark)](/images/grafana-localapi_dark.gif)
+
+To use the local API of your heatpump gateway, you need generate an access token first as described on [bosch-home-comfort](https://github.com/bosch-home-comfort/api-docs/blob/main/docs/k-40-rf.md).
+
+Then, create an [Infinity](https://grafana.com/grafana/plugins/yesoreyeram-infinity-datasource/) datasource in your locally running Grafana instance with the following settings:
+
+- Name: Infinity-BoschBuderus-LocalAPI
+- Authentication:
+  - Auth type: Bearer Token
+  - Bearer token: the access token of your gateway
+  - Allowed hosts: the hostname of your gateway, e.g. `https://K40RF-0acbbd`
+- URL, Headers, Params:
+  - Base URL: your hostname of your gateway and port 9443, e.g. `https://K40RF-0acbbd:9443`
+- Network:
+  - Skip TLS Verify: enabled
+- Security:
+  - Allowed hosts: the hostname of your gateway, e.g. `https://K40RF-0acbbd`
+- Health Check:
+  - Enable custom health check: enabled
+  - Health check URL: `https://K40RF-0acddb:9443/gateway/brand`
+
+Once the datasource is installed, navigate to _Dashboards_, select _New_ then _Import_ and paste the contents of either the [light configuration](/dashboards/grafana-dashboard-localapi_light.json) or the [dark configuration](/dashboards/grafana-dashboard-localapi_dark.json) into the text field.
+
+Dashboards configurations:
+
+- Light Theme: [grafana-dashboard-localapi_light.json](/dashboards/grafana-dashboard-localapi_light.json)
+- Dark Theme: [grafana-dashboard-localapi_dark.json](/dashboards/grafana-dashboard-localapi_dark.json)
+
+If you encounter any issues or have suggestions for improvements, please feel free to open an issue.
+
 
 ## Live view with ems-esp
 
